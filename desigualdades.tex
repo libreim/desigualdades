@@ -1,10 +1,10 @@
 \documentclass{article}
 \usepackage[spanish,activeacute]{babel}
 \usepackage[utf8]{inputenc}
-%%\usepackage{graphicx}
-%%\usepackage{color}
-%%\usepackage[dvipsnames]{xcolor}
-%%\usepackage[labelformat=empty]{caption}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[labelformat=empty]{caption}
 
 %% Macros de ayuda.
 \newenvironment{allinttt}{\ttfamily}{\par}
@@ -12,18 +12,39 @@
 
 
 %% Datos del documento
-\title{}
+\title{Desigualdades para límites en varias variables.}
 \author{}
 
 
 %% Cuerpo del documento
 \begin{document}
-
+\maketitle
 
 \section{Desigualdades.}
-\subsection{Desigualdades en espacios vectoriales.}
 
-Desigualdad de Cauchy-Schwarz.
+\subsection{Desigualdades básicas.}
+\noindent Desigualdades sobre el cuadrado.
+\begin{center}
+ $\displaystyle 0 \leq x^2$
+\end{center}
+\begin{center}
+ $\displaystyle |xy| \leq \frac{1}{2}\left(x^2+y^2\right)$
+\end{center}
+
+
+
+\subsection{Desigualdades en espacios vectoriales.}
+\noindent Desigualdad de Cauchy-Schwarz.
+\begin{center}
+ $\displaystyle |{\langle a,b \rangle}| \leq \|a\|\|b\|$
+\end{center}
+
+\noindent Desigualdad triangular.
+\begin{center}
+ $\displaystyle \|x+y\| \leq \|x\|+\|y\|$
+\end{center}
+
+
 
 
 \end{document}
