@@ -1,50 +1,120 @@
-\documentclass{article}
-\usepackage[spanish,activeacute]{babel}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Short Sectioned Assignment
+% LaTeX Template
+% Version 1.0 (5/5/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+% and has been modified. 
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[paper=a4, fontsize=11pt, spanish]{scrartcl} % A4 paper and 11pt font size
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[spanish]{babel} % English language/hyphenation
+\selectlanguage{spanish}
 \usepackage[utf8]{inputenc}
-\usepackage{graphicx}
-\usepackage{color}
-\usepackage[dvipsnames]{xcolor}
-\usepackage[labelformat=empty]{caption}
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
 
-%% Macros de ayuda.
-\newenvironment{allinttt}{\ttfamily}{\par}
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
 
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
 
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
 
-%% Datos del documento
-\title{Desigualdades para límites en varias variables.}
-\author{}
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
 
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
 
-%% Cuerpo del documento
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{	
+\normalfont \normalsize 
+\textsc{Universidad de Granada.} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge Desigualdades \\ % The assignment title
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+\author{Doble Grado en Ingeniería Informática y Matemáticas} % Your name
+
+\date{\normalsize\today} % Today's date or a custom date
+
 \begin{document}
-\maketitle
 
-\section{Desigualdades.}
+\maketitle % Print the title
 
-\subsection{Desigualdades básicas.}
-\noindent Desigualdades sobre el cuadrado.
-\begin{center}
- $\displaystyle 0 \leq x^2$
-\end{center}
-\begin{center}
- $\displaystyle |xy| \leq \frac{1}{2}\left(x^2+y^2\right)$
-\end{center}
+%----------------------------------------------------------------------------------------
+% Escribir una ecuación:
+%  \begin{align} 
+%  \begin{split}
+%----------------------------------------------------------------------------------------
+\newcommand {\equality}[1]{\textbf{Caso de igualdad:} {#1}}
 
 
+\section{Desigualdades en espacios vectoriales.}
+ \subsection{Desigualdad de Cauchy-Schwarz.}
+  Para todo par de vectores $x,y$ en un espacio prehilbertiano:
+  \begin{align}
+   |{\langle x,y \rangle}| \leq \|x\|\|y\|
+  \end{align}
+  \equality{$x,y$ son linealmente dependientes.}
+  
+  \subsection{Desigualdad triangular.}
+  Para todo par de vectores $x,y$ de un espacio vectorial normado:
+  \begin{align}
+    \displaystyle \|x+y\| \leq \|x\|+\|y\|
+  \end{align}
+  \equality{$x,y$ son de la forma $y = \lambda^2x$ para algún $\lambda$.}
 
-\subsection{Desigualdades en espacios vectoriales.}
-\noindent Desigualdad de Cauchy-Schwarz.
-\begin{center}
- $\displaystyle |{\langle a,b \rangle}| \leq \|a\|\|b\|$
-\end{center}
+  
+\section{Desigualdad de las medias.}
+  \subsection{Media geométrica y aritmética.}
+    Para cualesquiera $x_1,x_2,\dots,x_n$ positivos:
+    \begin{align}
+      \sqrt[n]{x_1x_2 \dots x_n} \leq \frac{x_1+x_2+\dots+x_n}{n}
+    \end{align}
+    \equality{todos ellos son iguales, $x_1=x_2=\dots=x_n$.}
+    
+  \subsection{Desigualdad completa.}
+    Para cualesquiera $x_1,x_2,\dots,x_n$ positivos:
+    \begin{align}
+      \frac{n}{\frac{1}{x_1} + \frac{1}{x_2} + \dots + \frac{1}{x_n}} \leq \sqrt[n]{x_1x_2 \dots x_n} \leq \frac{x_1+x_2+\dots+x_n}{n} \leq \sqrt{\frac{x_1^2+x_2^2+\dots+x_n^2}{n}}
+    \end{align}
+    \equality{todos ellos son iguales, $x_1=x_2=\dots=x_n$.}
+    
+  \subsection{Desigualdad generalizada.}  
+    Para cualesquiera $x_1,x_2,\dots,x_n$ positivos, la función:
+    \begin{align}
+     f(a) = \left\{ \begin{matrix} \left(\frac{x_1^a+x_2^a+\dots+x_n^a}{n}\right)^{1/a} & si & a \neq 0 \\ \displaystyle \sqrt[n]{x_1x_2 \dots x_n} & si & a = 0\end{matrix} \right.
+    \end{align}
+    es creciente. \\
+    \equality{será además monótona cuando $x_1=x_2=\dots=x_n$.}
 
-\noindent Desigualdad triangular.
-\begin{center}
- $\displaystyle \|x+y\| \leq \|x\|+\|y\|$
-\end{center}
-
-
-
-
+    
 \end{document}
