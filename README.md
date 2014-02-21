@@ -14,6 +14,9 @@ Desigualdades y acotaciones como herramienta.
   Dar importancia al caso de igualdad, útil para el cálculo de extremos.
 
 
-###**A modificar:**  
-  * Definir un entorno unificado en Latex para una desigualdad.  
-  * Es preferible texto con margen a la derecha que centrado.
+###**A añadir**  
+  * Acotaciones útiles.
+  * Desigualdad de Karamata
+  * Desigualdad de Muirhead
+  * Desigualdad de Chebyshev
+  * Desigualdad de Hölder
