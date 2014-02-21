@@ -6,7 +6,7 @@ Desigualdades y acotaciones como herramienta.
 
 ###**Objetivo:**  
   Elaborar unos apuntes de desigualdades lo suficientemente amplios como para ser usados en problemas
-  de distinta temática, pero condensados para facilitar al máximo su uso como referencia rápida.
+  de distinta temática, pero condensados para facilitar su uso como referencia rápida.
   Las desigualdades pueden ser usadas como herramienta para cálculo de extremos y para cálculo de límites,
   en una y varias variables.
   
@@ -15,7 +15,7 @@ Desigualdades y acotaciones como herramienta.
 
 
 ###**A añadir**  
-  * Acotaciones útiles.
+  * Acotaciones útiles
   * Desigualdad de Karamata
   * Desigualdad de Muirhead
   * Desigualdad de Chebyshev
