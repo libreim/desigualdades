@@ -14,7 +14,7 @@ Desigualdades y acotaciones como herramienta.
   Dar importancia al caso de igualdad, útil para el cálculo de extremos.
 
 
-###**A añadir**  
+###**A añadir:**  
   * Acotaciones útiles
   * Desigualdad de Karamata
   * Desigualdad de Muirhead
